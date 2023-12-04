@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Валидация формы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <h1 class="main__title">HTML-Форма с Валидацией</h1>
+
+    <form action="" class="form js-form">
+
+      <div class="form-personal">
+        <h2 class="form__title">Личная информация</h2>
+        <input type="text" placeholder="Имя" name="name" class="form-item js-input" >
+        <input type="email" placeholder="Email" name="email" class="form-item js-input js-input-email">
+        <input type="tel" placeholder="Телефон" name="phone" class="form-item js-input js-input-number">
+      </div>
+
+      <div class="form-biz">
+        <h2 class="form__title">Информация о бизнесе</h2>
+        <input placeholder="Ожидаемый оборот" type="number" step="any" name="return" class="form-item form-item-return js-input-return" required>
+        <select class="form-item js-input js-select" name="system" id="system">
+          <option selected disabled value="0">--Выбрать--</option>
+          <option value="1">Индустрия 1</option>
+          <option value="2">Индустрия 2</option>
+          <option value="3">Индустрия 3</option>
+        </select>
+        <label class="input-checkbox-lable js-input js-input-checkbox-lable" for="chb">
+          <input id="chb" type="checkbox" name="rules" class="form-item-checkbox js-input-checkbox">
+          Я принимаю правила сервиса
+        </label>
+      </div>
+
+      <button class="form__btn" type="submit">отправить</button>
+
+      <div class="modal js-modal">
+        <span class="modal__text">Спасибо! Ваша заявка принята</span>
+      </div>
+
+    </form>
+  </div>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

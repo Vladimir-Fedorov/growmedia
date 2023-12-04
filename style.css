@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #dad9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main__title {
+  color: #5361f0;
+  margin: 0;
+}
+
+@media screen and (max-width: 630px) {
+  .main__title {
+    font-size: 20px;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 700px;
+  position: relative;
+}
+
+.form__title {
+  margin: 25px 0 5px;
+}
+
+@media screen and (max-width: 630px) {
+  .form__title {
+    font-size: 16px;
+  }
+}
+
+.form__btn {
+  margin-left: auto;
+  background-color: #5361f0;
+  color: #fff;
+  width: 45%;
+  padding: 10px 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+  .form__btn {
+    margin: 15px 0 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .form {
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+  }
+}
+
+.form-personal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+
+@media screen and (max-width: 630px) {
+  .form-personal {
+    width: 100%;
+  }
+}
+
+.form-biz {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+
+@media screen and (max-width: 630px) {
+  .form-biz {
+    width: 100%;
+  }
+}
+
+.form-item {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-item.error {
+  border: 1px solid red;
+}
+
+.form-item-return {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.form-item-return::-webkit-outer-spin-button,
+.form-item-return::-webkit-inner-spin-button {
+  display: none;
+}
+
+.input-checkbox-lable.error {
+  border-bottom: 1px solid red;
+}
+
+.form .modal {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #1ac91a;
+  border-radius: 15px;
+  background-color: #fe8c8c;
+  color: #5361f0;
+  font-size: 19px;
+  font-weight: bold;
+  display: none;
+}
+
+.form .modal--active {
+  display: flex;
+  cursor: pointer;
+}
